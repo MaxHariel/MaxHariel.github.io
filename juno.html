@@ -39,21 +39,21 @@
               expirationYear
           };
       
-        // checkout.getCardHash(cardData, function(cardHash) {
-        //   console.log(cardHash)
-        //     /* Sucesso - A variável cardHash conterá o hash do cartão de crédito */
-        // }, function(error) {
-        //   console.error(error)
-        //     /* Erro - A variável error conterá o erro ocorrido ao obter o hash */
-        // });
-
-        console.log("CardNumber Is Valid? ",checkout.isValidCardNumber(cardData.cardNumber));
-        console.log("Security Code is Valid? ", checkout.isValidSecurityCode(cardData.cardNumber, cardData.securityCode));
-        console.log("Expire Date is Valid? ", checkout.isValidExpireDate(cardData.expirationMonth, cardData.expirationYear));
-        checkout.isValidCardData(cardData, function(error) {
-          console.log(error)
-          /* Erro - A variável error conterá o erro ocorrido durante a validação dos dados do cartão de crédito */
-      });
+          
+          console.log("CardNumber Is Valid? ",checkout.isValidCardNumber(cardData.cardNumber));
+          console.log("Security Code is Valid? ", checkout.isValidSecurityCode(cardData.cardNumber, cardData.securityCode));
+          console.log("Expire Date is Valid? ", checkout.isValidExpireDate(cardData.expirationMonth, cardData.expirationYear));
+          checkout.isValidCardData(cardData, function(error) {
+            console.log(error)
+            /* Erro - A variável error conterá o erro ocorrido durante a validação dos dados do cartão de crédito */
+          });
+          checkout.getCardHash(cardData, function(cardHash) {
+            console.log(cardHash)
+              /* Sucesso - A variável cardHash conterá o hash do cartão de crédito */
+          }, function(error) {
+            console.error(error)
+              /* Erro - A variável error conterá o erro ocorrido ao obter o hash */
+          });
     }
   </script>
 
